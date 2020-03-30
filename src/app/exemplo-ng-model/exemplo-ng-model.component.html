@@ -1,0 +1,28 @@
+<mat-card class="formulario">
+  <mat-card-title>Formulário com NgModel</mat-card-title>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="nome" name="Nome">
+  </mat-form-field>
+
+  <br><br>
+
+  <mat-card-actions>
+    <button mat-button (click)="limpar()">
+      <mat-icon>clear</mat-icon>
+      LIMPAR
+    </button>
+    <button mat-raised-button color="primary" (click)="enviar()">
+      <mat-icon>send</mat-icon>
+      ENVIAR
+    </button>
+  </mat-card-actions>
+
+</mat-card>
+
+<div *ngIf="jsonDados" class="dados-enviados">
+  <h3>Dados enviados:</h3>
+  <p>{{ jsonDados }}</p>
+</div>

@@ -1,0 +1,18 @@
+<mat-card *ngFor="let exemplo of exemplos">
+  <mat-card-title>{{ exemplo.titulo }}</mat-card-title>
+  <mat-card-subtitle>{{ exemplo.subtitulo }}</mat-card-subtitle>
+
+  <P>{{ exemplo.descricao }}</P>
+
+  <mat-card-actions>
+    <button mat-button (click)="navegarNovaAba(exemplo.urlCodigo)">
+      <mat-icon>code</mat-icon>
+      CÓDIGO
+    </button>
+    <button mat-raised-button color="primary" [routerLink]="exemplo.urlExemplo">
+      <mat-icon>ondemand_video</mat-icon>
+      EXEMPLO
+    </button>
+  </mat-card-actions>
+
+</mat-card>

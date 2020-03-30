@@ -1,0 +1,68 @@
+<mat-card class="formulario">
+    <mat-card-title>Formulário com FormControl</mat-card-title>
+  
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput [formControl]="nome" name="Nome">
+
+        <mat-error *ngIf="nome.hasError('required')">Preencha o Campo!</mat-error>
+        <mat-error *ngIf="nome.hasError('maxlength')">O Campo deve conter no máximo 16 caracteres!</mat-error>
+
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput [formControl]="sobrenome" name="Sobrenome">
+  
+          <mat-error *ngIf="sobrenome.hasError('required')">Preencha o Campo!</mat-error>
+          <mat-error *ngIf="sobrenome.hasError('maxlength')">O Campo deve conter no máximo 32 caracteres!</mat-error>
+  
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput [formControl]="sobrenome" name="Sobrenome">
+  
+          <mat-error *ngIf="sobrenome.hasError('required')">Preencha o Campo!</mat-error>
+          <mat-error *ngIf="sobrenome.hasError('maxlength')">O Campo deve conter no máximo 32 caracteres!</mat-error>
+  
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput [formControl]="sobrenome" name="Sobrenome">
+  
+          <mat-error *ngIf="sobrenome.hasError('required')">Preencha o Campo!</mat-error>
+          <mat-error *ngIf="sobrenome.hasError('maxlength')">O Campo deve conter no máximo 32 caracteres!</mat-error>
+  
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput [formControl]="sobrenome" name="Sobrenome">
+  
+          <mat-error *ngIf="sobrenome.hasError('required')">Preencha o Campo!</mat-error>
+          <mat-error *ngIf="sobrenome.hasError('maxlength')">O Campo deve conter no máximo 32 caracteres!</mat-error>
+  
+      </mat-form-field>
+  
+    <br><br>
+  
+    <mat-card-actions>
+      <button mat-button (click)="limpar()">
+        <mat-icon>clear</mat-icon>
+        LIMPAR
+      </button>
+      <button mat-raised-button color="primary" (click)="enviar()">
+        <mat-icon>send</mat-icon>
+        ENVIAR
+      </button>
+    </mat-card-actions>
+  
+  </mat-card>
+  
+  <div *ngIf="jsonDados" class="dados-enviados">
+    <h3>Dados enviados:</h3>
+    <p>{{ jsonDados }}</p>
+  </div>
+  
