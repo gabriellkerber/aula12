@@ -20,8 +20,8 @@
       </mat-form-field>
 
       <mat-form-field appearance="fill">
-        <mat-label>Sobrenome</mat-label>
-        <input matInput [formControl]="sobrenome" name="Idade">
+        <mat-label>Idade</mat-label>
+        <input matInput [formControl]="idade" name="Idade">
   
           <mat-error *ngIf="sobrenome.hasError('required')">Preencha o Campo!</mat-error>
           <mat-error *ngIf="sobrenome.hasError('maxlength')">O Campo deve conter no máximo 32 caracteres!</mat-error>
