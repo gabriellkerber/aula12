@@ -24,7 +24,6 @@
         <input matInput [formControl]="idade" name="Idade">
   
           <mat-error *ngIf="sobrenome.hasError('required')">Preencha o Campo!</mat-error>
-          <mat-error *ngIf="sobrenome.hasError('maxlength')">O Campo deve conter no máximo 32 caracteres!</mat-error>
   
       </mat-form-field>
 
