@@ -20,29 +20,25 @@
       </mat-form-field>
 
       <mat-form-field appearance="fill">
-        <mat-label>Idade</mat-label>
-        <input matInput [formControl]="idade" name="Idade">
+        <mat-label>Estado</mat-label>
+        <input matInput [formControl]="estado" name="Estado">
   
-          <mat-error *ngIf="sobrenome.hasError('required')">Preencha o Campo!</mat-error>
-  
-      </mat-form-field>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Sobrenome</mat-label>
-        <input matInput [formControl]="sobrenome" name="Sobrenome">
-  
-          <mat-error *ngIf="sobrenome.hasError('required')">Preencha o Campo!</mat-error>
-          <mat-error *ngIf="sobrenome.hasError('maxlength')">O Campo deve conter no máximo 32 caracteres!</mat-error>
+          <mat-error *ngIf="estado.hasError('required')">Preencha o Campo!</mat-error>
   
       </mat-form-field>
 
       <mat-form-field appearance="fill">
-        <mat-label>Sobrenome</mat-label>
-        <input matInput [formControl]="sobrenome" name="Sobrenome">
+        <mat-label>Cidade</mat-label>
+        <input matInput [formControl]="cidade" name="Cidade">
   
-          <mat-error *ngIf="sobrenome.hasError('required')">Preencha o Campo!</mat-error>
-          <mat-error *ngIf="sobrenome.hasError('maxlength')">O Campo deve conter no máximo 32 caracteres!</mat-error>
+          <mat-error *ngIf="cidade.hasError('required')">Preencha o Campo!</mat-error>  
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Profissão</mat-label>
+        <input matInput [formControl]="profissao" name="profissao">
   
+          <mat-error *ngIf="profissao.hasError('required')">Preencha o Campo!</mat-error>  
       </mat-form-field>
   
     <br><br>
